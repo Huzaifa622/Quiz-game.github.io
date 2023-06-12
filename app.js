@@ -344,10 +344,13 @@ setRecord.addEventListener('click', ()=>{
 });
 
 recordButton.addEventListener('click', ()=>{
- record.forEach((rec)=>{
+  let recordsHTML = ''; 
 
-   recordList.innerHTML = `<li class="recordListing"><div>Name:${rec.name}</div><div>Id:${rec.Id} <span>score: ${rec.myScore}</span></div></li>`;
-  })
+  record.forEach((rec) => {
+    recordsHTML += `<li class="recordListing"><div>Name: ${rec.name}</div><div>Id: ${rec.Id} <span>score: ${rec.myScore}</span></div></li>`;
+  });
+
+  recordList.innerHTML = recordsHTML;
   console.log(record)
 
   blur.classList.add('active');
