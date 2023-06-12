@@ -346,7 +346,7 @@ setRecord.addEventListener('click', ()=>{
 recordButton.addEventListener('click', ()=>{
  record.forEach((rec)=>{
 
-   recordList.innerHTML += `<li class="recordListing"><div>Name:${rec.name}</div><div>Id:${rec.Id} <span>score: ${rec.myScore}</span></div></li>`;
+   recordList.innerHTML = `<li class="recordListing"><div>Name:${rec.name}</div><div>Id:${rec.Id} <span>score: ${rec.myScore}</span></div></li>`;
   })
   console.log(record)
 
